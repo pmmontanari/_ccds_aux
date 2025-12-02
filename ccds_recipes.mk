@@ -1,3 +1,7 @@
+### 
+# Copy and paste inside the ccds Makefile
+###
+
 ## Initialize project
 .PHONY: initialize
 initialize:
