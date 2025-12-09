@@ -16,7 +16,7 @@ initialize:
 # install dependencies
 	requirements
 
-## Install Python dependencies
+## Install Python dependencies - SUBSTITUTE IN MAKEFILE
 .PHONY: requirements
 requirements:
 	uv pip install -r requirements.txt
