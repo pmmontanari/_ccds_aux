@@ -25,11 +25,17 @@ create_main:
 
 
 ## Add dependencies from "requirements.txt" to lock file
-.PHONY: add_dependencies
-add_dependencies:
-	uv add -r --dev requirements.txt
+.PHONY: update_lock_from_requirements
+update_lock_from_requirements:
+	uv add --dev -r requirements.txt
 
-## Update "requirements.txt" from lock:
+# ## Update "requirements.txt" from lock
 .PHONY: update_requirements_from_lock
 update_requirements_from_lock:
 	uv export --no-hashes --no-header --no-annotate --format requirements-txt > requirements.txt
+
+## Update "requirements.txt" and lock
+.PHONY: update_project_dependencies
+update_project_dependencies:
+	update_lock_from_requirements
+	update_requirements_from_lock
