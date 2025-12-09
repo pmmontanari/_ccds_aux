@@ -2,15 +2,6 @@
 # USER RECIPES                                                                  #
 #################################################################################
 
-## Create git repository
-.PHONY: create_git_repo
-create_git_repo:
-# create git repo
-	git init
-	git add .
-	git commit -m "CCDS defaults"
-
-
 ## Remove "models" and "notebooks" folder
 .PHONY: remove_models_and_notebooks
 remove_models_and_notebooks:
@@ -39,3 +30,19 @@ update_requirements_from_lock:
 update_project_dependencies:
 	update_lock_from_requirements
 	update_requirements_from_lock
+	
+#################################################################################
+# USER SHELL SCRIPTS (NOT RECIPES!)                                             #
+#################################################################################
+
+## Environment startup (COPY AND PASTE MANUALLY ON TERMINAL)
+git init
+git add .
+git commit -m "CCDS defaults"
+make create_environment
+.venv/script/activate
+make requirements
+
+## Suggested to run when updating dependencies
+make update_lock_from_requirements
+make update_requirements_from_lock
