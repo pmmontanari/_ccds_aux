@@ -29,8 +29,7 @@ create_main:
 add_dependencies:
 	uv add -r --dev requirements.txt
 
-
 ## Update "requirements.txt" from lock:
 .PHONY: update_requirements_from_lock
 update_requirements_from_lock:
-	uv export --no-hashes --format requirements-txt > requirements.txt
+	uv export --no-hashes --no-header --no-annotate --format requirements-txt > requirements.txt
