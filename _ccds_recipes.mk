@@ -27,7 +27,7 @@ create_main:
 ## Add dependencies from "requirements.txt" to lock file
 .PHONY: add_dependencies
 add_dependencies:
-	uv add -r requirements.txt
+	uv add -r --dev requirements.txt
 
 
 ## Update "requirements.txt" from lock:
