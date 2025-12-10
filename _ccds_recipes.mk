@@ -1,6 +1,16 @@
 #################################################################################
 # USER RECIPES                                                                  #
 #################################################################################
+## Source: Rasmus Bååth, "A Makefile recipe for Python data pipelines" 2023-06-10
+# Some reasonable makefile settings
+# Always use the bash shell instead of the default shell which might be zsh, fish, etc.
+SHELL := bash
+# Flags to put bash into "strict" mode
+.SHELLFLAGS := -eu -o pipefail -c
+MAKEFLAGS += --warn-undefined-variables
+# We're not compiling C++, so no need for the many built-in rules 
+MAKEFLAGS += --no-builtin-rules
+
 
 ## Remove "models" and "notebooks" folder
 .PHONY: remove_models_and_notebooks
@@ -31,18 +41,6 @@ update_project_dependencies:
 	update_lock_from_requirements
 	update_requirements_from_lock
 	
-#################################################################################
-# USER SHELL SCRIPTS (NOT RECIPES!)                                             #
-#################################################################################
-
-## Environment startup (COPY AND PASTE MANUALLY ON TERMINAL)
-git init
-git add .
-git commit -m "CCDS defaults"
-make create_environment
-.venv/Scripts/activate
-make requirements
-
 ## Suggested to run when updating dependencies
-make update_lock_from_requirements
-make update_requirements_from_lock
+# make update_lock_from_requirements
+# make update_requirements_from_lock
