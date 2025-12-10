@@ -40,7 +40,7 @@ git init
 git add .
 git commit -m "CCDS defaults"
 make create_environment
-.venv/script/activate
+.venv/Scripts/activate
 make requirements
 
 ## Suggested to run when updating dependencies
