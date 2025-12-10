@@ -5,8 +5,8 @@
 ## Remove "models" and "notebooks" folder
 .PHONY: remove_models_and_notebooks
 remove_models_and_notebooks:
-# remove unused folders
-	rm -rf ./models ./notebooks
+# does not work on windows!
+	rm -rf ./models ./notebooks 
 
 
 ## Create "main.py"
