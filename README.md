@@ -1,11 +1,16 @@
 # _ccds_aux
 Tweaks on the Cookiecutter Data Science v2.0 template
 
+> [!NOTE]
+> I intend to fork the CCDS in the future to apply these changes. 
+>
+> For now I manually copy and paste these scripts and run my custom Make recipes.
+
 ## Philosophy
 CCDS is great, but I wanted to tweak it to my workflow. 
 
 I noticed I was always setting up the project in the same way and applying the
-same modifications, so I decided to fork the ccds repo.
+same modifications.
 
 As the original CCDS, this version is very opinionated so if you don't like it,
 stick to the original. It does a great job in covering the essentials.
@@ -27,7 +32,7 @@ The changes are explained below, here I will try to give my motivation to them.
 * The projet module was a bit cluttered for me. I maintained only the
   `config.py` file to get access to global variables and paths. I also added a
   `_boilerplate.py` file to be the template for any other file
-* I like logguru, but I don't use typer, so I removed it
+* I like loguru, but I don't use typer, so I removed it
 * After having problems using the `Makefile` in Windows, I configured the Makefile
   to always run on bash
 * The `_initialize_project.sh` perform actions that are reccomended as first steps
@@ -70,4 +75,6 @@ The changes are explained below, here I will try to give my motivation to them.
 ## TO DO
 * [x] Delete notebooks folder
 * [x] Adapt Makefile to sue uv
-* [ ] Implement updating on the directory tree, see [tutorial](https://realpython.com/directory-tree-generator-python/)
+* [ ] Implement updating on the directory tree, see
+  [tutorial](https://realpython.com/directory-tree-generator-python/)
+* [ ] Fork CCDS and apply these changes
