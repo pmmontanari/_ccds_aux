@@ -18,6 +18,17 @@ remove_models_and_notebooks:
 	rm -rf ./models ./notebooks 
 
 
+## Remove "interim" data folder
+.PHONY: remove_interim_data:
+	rm -rf ./data/interim
+
+
+## Transform .gitkeep in 'references' to .gitignore:
+.PHONY: mv_references_gitkeep_gitignore
+mv_references_gitkeep_gitignore:
+	mv ./references/.gitkeep ./references/.gitignore
+
+
 ## Create "main.py"
 .PHONY: create_main
 create_main:
@@ -29,10 +40,12 @@ create_main:
 update_lock_from_requirements:
 	uv add --dev -r requirements.txt
 
+
 # ## Update "requirements.txt" from lock
 .PHONY: update_requirements_from_lock
 update_requirements_from_lock:
 	uv export --no-hashes --no-header --no-annotate --format requirements-txt > requirements.txt
+
 
 ## Update "requirements.txt" and lock
 .PHONY: update_project_dependencies
