@@ -42,7 +42,6 @@ The changes are explained below, here I will try to give my motivation to them.
   2. Create a Python virtual environment
   3. Install the dependencies
 
-
 ## Changes
 ### Default options
 * **none** as *data_storage*
@@ -56,7 +55,7 @@ The changes are explained below, here I will try to give my motivation to them.
 ### Folder structure
 * No `./models` and `./notebooks` folder
 * No `./data/interim` folder
-* Changed `./references/.gitkeep` to .gitignore
+* Changed `./references/.gitkeep` to `.gitignore`
 * Added _initialize_project.sh that does the following
     * create git repository and commit defaults
     * make and activate a virtual environment
@@ -73,8 +72,6 @@ The changes are explained below, here I will try to give my motivation to them.
 * Added recipes to update .lock from requirements and to update requirements from lock
 
 ## TO DO
-* [x] Delete notebooks folder
-* [x] Adapt Makefile to sue uv
 * [ ] Implement updating on the directory tree, see
   [tutorial](https://realpython.com/directory-tree-generator-python/)
 * [ ] Fork CCDS and apply these changes
