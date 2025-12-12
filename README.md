@@ -55,7 +55,9 @@ The changes are explained below, here I will try to give my motivation to them.
 ### Folder structure
 * No `./models` and `./notebooks` folder
 * No `./data/interim` folder
-* Changed `./references/.gitkeep` to `.gitignore`
+* Changed `./references/.gitkeep` to `.gitignore
+* Changed `./reports/.gitkeep` to `.gitignore
+* Added `./reports/figures/` to .gitignore
 * Added `_initialize_project.sh` that does the following
     * create git repository and commit defaults
     * make and activate a virtual environment
