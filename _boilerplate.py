@@ -2,7 +2,7 @@ from loguru import logger
 from tqdm import tqdm
 
 ## ---- Import paths as needed ----
-# from project_name.config import (
+# from <change_to_project_name>.config import (
 #     DATA_DIR,
 #     FIGURES_DIR,
 #     INTERIM_DATA_DIR,
@@ -13,6 +13,11 @@ from tqdm import tqdm
 #     FIGURES_DIR
 # )
 
+## ---- User packages ----
+# from foo import bar
+
+## ---- GLOBALS ----
+# CONFIG = 123
 
 def main():
     # ---- REPLACE THIS WITH YOUR OWN CODE ----
