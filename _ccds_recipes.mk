@@ -29,12 +29,6 @@ mv_references_gitkeep_gitignore:
 	mv ./references/.gitkeep ./references/.gitignore
 
 
-## Create "main.py"
-.PHONY: create_main
-create_main:
-	touch main.py
-
-
 ## Add dependencies from "requirements.txt" to lock file
 .PHONY: update_lock_from_requirements
 update_lock_from_requirements:
