@@ -54,7 +54,6 @@ The changes are explained below, here I will try to give my motivation to them.
 
 ### Folder structure
 * No `./models` and `./notebooks` folder
-* No `./data/interim` folder
 * Changed `./references/.gitkeep` to `.gitignore
 * Changed `./reports/.gitkeep` to `.gitignore
 * Added `./reports/figures/` to .gitignore
